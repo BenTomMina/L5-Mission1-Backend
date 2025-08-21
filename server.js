@@ -17,7 +17,9 @@ const app = express();
 
 //Middleware
 app.use(express.json());
-app.use(cors("https://witty-field-02089c900.2.azurestaticapps.net"));
+app.use(
+  cors({ origin: "https://witty-field-02089c900.2.azurestaticapps.net" })
+);
 app.use(fileUpload());
 
 // Retrieve environment variables
